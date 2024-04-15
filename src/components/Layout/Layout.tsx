@@ -13,7 +13,7 @@ import { Modal } from '../Modal/Modal';
 import { Navigation } from '../Navigation/Navigation';
 import { Login } from '../Auth/Login';
 import { Register } from '../Auth/Register';
-import UkraineSvg from '/src/assets/ukraine.svg';
+import UkraineSvg from '/src/assets/icons/logo-ps.svg';
 import { LayoutProps } from '../../redux/types';
 
 export const Layout: React.FC<LayoutProps> = ({ authUser }) => {

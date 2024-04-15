@@ -2,7 +2,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import { BtnClose, CloseBtnSvg, ModalContainer, OverLay } from './Modal.styled';
 import { useEffect } from 'react';
-import CloseSvg from '../../assets/close.svg';
+import CloseSvg from '../../assets/icons/x-close.svg';
 import { ModalProps } from '../../redux/types';
 
 const modalElement = document.getElementById('portal');

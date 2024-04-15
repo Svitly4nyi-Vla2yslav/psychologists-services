@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import rectangleYellow3 from '../../assets/rectangle-yellow3.png';
-import rectangleYellow from '../../assets/rectangle-yellow.png';
+// import rectangleYellow3 from '../../assets/rectangle-yellow3.png';
+// import rectangleYellow from '../../assets/rectangle-yellow.png';
 import { Link } from 'react-router-dom';
 
 export const HomeContainer = styled.div`
@@ -150,7 +150,7 @@ export const ImgMacYellSvg = styled.img`
 // ------------BENEFITS--------------------------
 
 export const BenefitsContainer = styled.div`
-background-image: url(${rectangleYellow3});
+background-image: url();
   margin-top: 24px;
   width: 100%;
   height: 100%;
@@ -164,7 +164,7 @@ background-image: url(${rectangleYellow3});
   padding-bottom: 30px;
   
   @media screen and (min-width: 768px) {
-    background-image: url(${rectangleYellow});
+    background-image: url();
     background-size: contain;
     height: 100%;
     padding: 25px;

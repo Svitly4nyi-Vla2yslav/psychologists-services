@@ -7,7 +7,7 @@ import {
   NavLinkMenu,
   NavListMenu,
 } from './AuthNav.styled';
-import LogIn from '../../assets/log-in-01.svg';
+import LogIn from '../../assets/icons/log-in-01.svg';
 import { AuthNavInProps } from '../../redux/types';
 
 export const AuthNavIn: React.FC<AuthNavInProps> = ({

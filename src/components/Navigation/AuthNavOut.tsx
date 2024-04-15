@@ -9,7 +9,7 @@ import {
   LogOutSvg,
 } from './AuthNav.styled';
 import { auth } from '../../firebase';
-import LogOut from '../../assets/log-out.svg?url';
+import LogOut from '../../assets/icons/log-out.svg?url';
 
 export const AuthNavOut: React.FC = () => {
   const currentUser = auth.currentUser;

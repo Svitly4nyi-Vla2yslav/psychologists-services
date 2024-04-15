@@ -3,7 +3,7 @@ import { auth, googleAuthProvider } from '../../firebase';
 import toast from 'react-hot-toast';
 import { BtnSubmitGoogle, BtnGoogleSvg } from '../Modal/Modal.styled';
 import { AuthProviderProps } from '../../redux/types';
-import GoogleSvg from '../../assets/google.svg';
+import GoogleSvg from '../../assets/icons/google.svg';
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ close }) => {
   function handleSubmitwithGoogle() {

@@ -5,8 +5,8 @@ import {
   BenefitsText,
   HomeContainer,
   ImageContainer,
-  ImgGirlSvg,
-  ImgMacYellSvg,
+  // ImgGirlSvg,
+  // ImgMacYellSvg,
   InfoContainer,
   Lang,
   LinkStart,
@@ -16,8 +16,8 @@ import {
   Text,
   Title,
 } from './HomePage.styled';
-import GirlSvg from '../../assets/girl.svg';
-import MacYellSvg from '../../assets/iMac-yellow.svg';
+// import GirlSvg from '../../assets/girl.svg';
+// import MacYellSvg from '../../assets/iMac-yellow.svg';
 
 const Home: React.FC = () => {
   return (
@@ -35,8 +35,8 @@ const Home: React.FC = () => {
           <LinkStart to="/teachers">Get started</LinkStart>
         </StartContainer>
         <ImageContainer>
-          <ImgGirlSvg src={GirlSvg} alt="Girl" />
-          <ImgMacYellSvg src={MacYellSvg} alt="LapTop" />
+          {/* <ImgGirlSvg src={GirlSvg} alt="Girl" />
+          <ImgMacYellSvg src={MacYellSvg} alt="LapTop" /> */}
         </ImageContainer>
       </InfoContainer>
       <BenefitsContainer>

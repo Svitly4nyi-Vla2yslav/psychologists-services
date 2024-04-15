@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Block,
-  Book,
   BookBtn,
   BtnMore,
   DataItem,
@@ -32,8 +31,8 @@ import {
   TeacherPhoto,
   Text,
 } from './Card.styled';
-import BookSvg from '../../assets/book-open.svg?url';
-import StarSvg from '../../assets/star.svg?url';
+// import BookSvg from '../../assets/icons/book-open.svg?url';
+import StarSvg from '../../assets/icons/star.svg?url';
 import face from "../../../public/face.png"
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites } from '../../redux/selectors';
@@ -116,7 +115,7 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
             <DataItem>
               <ElementsContainer>
                 {' '}
-                <Book src={BookSvg} alt="📖" /> Lessons online
+                {/* <Book src={BookSvg} alt="📖" />  */}Lessons online
               </ElementsContainer>
             </DataItem>
             <DataItem>Lessons done: {teacher.lessons_done}</DataItem>
