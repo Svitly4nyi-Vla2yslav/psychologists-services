@@ -6,7 +6,7 @@ import {
   selectIsLoading,
   selectTeachers,
 } from '../../redux/selectors';
-import { LoadMoreBtn, TeachersContainer } from './Teachers.styled';
+import { LoadMoreBtn, TeachersContainer } from './Psychologists.styled';
 import { fetchFavorites } from '../../redux/favorites/operations';
 import { CardList } from '../../components/CardList/CardList';
 import { MyLoader } from '../../components/Loader/Loader';

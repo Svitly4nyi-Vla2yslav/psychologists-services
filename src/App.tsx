@@ -6,7 +6,7 @@ import { auth } from './firebase';
 import { PrivateRoute } from './components/Navigation/PrivateRoute';
 
 const Home = lazy(() => import('./pages/HomePage/HomePage'));
-const Teachers = lazy(() => import('./pages/Teachers/Teachers'));
+const Teachers = lazy(() => import('./pages/Psychologists/Psychologists'));
 const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 
 export const App: React.FC = () => {
