@@ -3,7 +3,6 @@ import { NavLink, Outlet } from 'react-router-dom';
 import {
   HeaderContainer,
   LayoutWrap,
-  LogoSvg,
   NavLinkLogo,
   NavList,
 } from './Layout.styled';
@@ -13,8 +12,8 @@ import { Modal } from '../Modal/Modal';
 import { Navigation } from '../Navigation/Navigation';
 import { Login } from '../Auth/Login';
 import { Register } from '../Auth/Register';
-import UkraineSvg from '/src/assets/icons/logo-ps.svg';
 import { LayoutProps } from '../../redux/types';
+import { Lang } from '../../pages/HomePage/HomePage.styled';
 
 export const Layout: React.FC<LayoutProps> = ({ authUser }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,11 +45,10 @@ export const Layout: React.FC<LayoutProps> = ({ authUser }) => {
         <NavList>
           <li>
             <NavLink to="/">
-              <LogoSvg src={UkraineSvg} alt="Ukraine Logo" />
             </NavLink>
           </li>
           <li>
-            <NavLinkLogo to="/">LearnLingo</NavLinkLogo>
+            <NavLinkLogo to="/"><Lang>psychologists.</Lang>services</NavLinkLogo>
           </li>
         </NavList>
         <Navigation

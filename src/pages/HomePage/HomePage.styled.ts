@@ -21,8 +21,8 @@ export const InfoContainer = styled.div`
 
 // ----------------MAIN TEXT------------------
 export const StartContainer = styled.div`
-  border-radius: 30px;
-  background: #f8f8f8;
+  // border-radius: 30px;
+  // background: #f8f8f8;
   width: 100%;
   padding-left: 5px;
   max-width: 320px;
@@ -39,7 +39,7 @@ export const StartContainer = styled.div`
 
   @media screen and (min-width: 1400px) {
     min-width: 330px;
-    max-width: 720px;
+    max-width: 595px;
     height: 530px;
     padding-left: 70px;
     display: block;
@@ -59,12 +59,23 @@ export const Title = styled.h1`
     margin-top: 105px;
     font-size: 48px;
     text-align: start;
+    font-weight: 600;
+font-size: 75px;
+
+// line-height: 82px; 
+line-height: 1.025;
+letter-spacing: -0.02em;
+color: #191a15;
   }
 `;
 export const Lang = styled.span`
   font-style: italic;
-  font-weight: 400;
-  background: ${({ theme }) => theme.lightYellow};
+  font-weight: 600;
+  color: #fc832c;
+
+  &:hover{
+    color: ${({ theme }) => theme.primaryBlack};
+  }
 `;
 
 export const Text = styled.p`
@@ -86,14 +97,14 @@ export const LinkStart = styled(Link)`
   font-weight: 700;
   font-size: 16px;
   line-height: 1.56;
-  border-radius: 12px;
+  border-radius: 25px;
   padding: 16px 48px;
-  color: ${({ theme }) => theme.primaryBlack};
+  color: ${({ theme }) => theme.orange};
   background: ${({ theme }) => theme.primaryYellow};
   margin-bottom: 20px;
 
   &:hover {
-    color: ${({ theme }) => theme.primaryYellow};
+    color: ${({ theme }) => theme.orange};
     background: ${({ theme }) => theme.lightYellow};
   }
 
@@ -110,9 +121,8 @@ export const LinkStart = styled(Link)`
 export const ImageContainer = styled.div`
   position: relative;
   border-radius: 30px;
-  max-width: 568px;
-  height: 450px;
-  background: ${({ theme }) => theme.lightYellow};
+  max-width: 464px;
+  height: 526px;
 
   @media screen and (min-width: 1140px) {
     width: 568px;
@@ -128,8 +138,9 @@ export const ImgGirlSvg = styled.img`
   @media screen and (min-width: 1140px) {
     margin-left: 114px;
     margin-top: 80px;
-    width: auto;
-    height: auto;
+    border-radius: 10px;
+    width: 464px;
+    height: 526px;
   }
 `;
 
