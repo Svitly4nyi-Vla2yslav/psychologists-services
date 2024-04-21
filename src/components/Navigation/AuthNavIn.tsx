@@ -21,7 +21,7 @@ export const AuthNavIn: React.FC<AuthNavInProps> = ({
           <NavLinkMenu to="/">Home</NavLinkMenu>
         </li>
         <li>
-          <NavLinkMenu to="/teachers">Teachers</NavLinkMenu>
+          <NavLinkMenu to="/psychologists">Psychologists</NavLinkMenu>
         </li>
       </NavListMenu>
       <AuthContainer>

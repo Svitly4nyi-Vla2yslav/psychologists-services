@@ -18,7 +18,7 @@ export interface UserData {
 
 export interface CardListProps{
   authUser: () => void;
-   teachers: Teacher;
+   psychologists: Teacher;
 }
 export interface Review {
   photo: string | undefined;

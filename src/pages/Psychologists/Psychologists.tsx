@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTeachers } from '../../redux/teachers/operations';
+import { fetchTeachers } from '../../redux/psychologists/operations';
 import {
   selectError,
   selectIsLoading,
@@ -18,7 +18,7 @@ interface TeachersProps{
 
 const Teacher: React.FC<TeachersProps> = ({ authUser}) => {
   const dispatch = useDispatch<AppDispatch>();
-  const teachers = useSelector(selectTeachers);
+  const psychologists = useSelector(selectTeachers);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const [visibleTeachers, setVisibleTeachers] = useState(4);
@@ -37,8 +37,8 @@ const Teacher: React.FC<TeachersProps> = ({ authUser}) => {
   return (
     <TeachersContainer>
       {isLoading && !error && <MyLoader/>}
-      <CardList authUser={authUser} teachers={teachers.slice(0, visibleTeachers)} />
-      {teachers.length > visibleTeachers && (
+      <CardList authUser={authUser} psychologists={psychologists.slice(0, visibleTeachers)} />
+      {psychologists.length > visibleTeachers && (
         <LoadMoreBtn onClick={loadMoreTeachers}>Load More</LoadMoreBtn>
       )}
     </TeachersContainer>

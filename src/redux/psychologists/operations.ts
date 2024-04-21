@@ -5,18 +5,18 @@ import { Teacher } from "../types";
 
 
 export const fetchTeachers = createAsyncThunk(
-    'teachers/fetchAll',
+    'psychologists/fetchAll',
     async (_, thunkAPI) => {
       try {
-        const snapshot = await get(child(dbRef, 'teachers'));
-        const teachersData: Teacher[] = [];
+        const snapshot = await get(child(dbRef, 'psychologists'));
+        const psychologistsData: Teacher[] = [];
         snapshot.forEach((teacherSnapshot) => {
-          teachersData.push({
+          psychologistsData.push({
             ...teacherSnapshot.val(),
             id: teacherSnapshot.key,
           });
         });
-        return teachersData;
+        return psychologistsData;
       } catch (error: any) {
         console.error(error);
         return thunkAPI.rejectWithValue(error.message);

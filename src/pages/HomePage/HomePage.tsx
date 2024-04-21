@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             guide in your own life with the help of our experienced
             psychologists.
           </Text>
-          <LinkStart to="/teachers">Get started</LinkStart>
+          <LinkStart to="/psychologists">Get started</LinkStart>
         </StartContainer>
         <ImageContainer>
           <ImgGirlSvg src={Girl} alt="Girl" />

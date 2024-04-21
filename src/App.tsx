@@ -29,7 +29,7 @@ export const App: React.FC = () => {
     <Routes>
       <Route path="/" element={<Layout authUser={authUser} />}>
         <Route index element={<Home />} />
-        <Route path="teachers" element={<Teachers authUser={authUser} />} />
+        <Route path="psychologists" element={<Teachers authUser={authUser} />} />
         <Route
           path="favorites"
           element={

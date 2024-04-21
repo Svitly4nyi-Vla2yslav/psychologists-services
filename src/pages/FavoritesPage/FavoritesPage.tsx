@@ -31,12 +31,12 @@ const errorFav = useSelector(selectErrorFav);
     <FavoritesContainer>
           {isLoadingFav && !errorFav && <MyLoader/>}
     {favorites.length > 0 ? (
-        <CardList teachers={favorites} authUser={authUser} />
+        <CardList psychologists={favorites} authUser={authUser} />
       ) : (
         <><ImageContainer>
             {/* <ImgGirlSvg src={GirlSvg} alt="Girl" />
             <ImgMacYellSvg src={MacYellSvg} alt="LapTop" /> */}
-          </ImageContainer><Text>Favorite teachers haven't been selected yet 😒</Text></>
+          </ImageContainer><Text>Favorite psychologists haven't been selected yet 😒</Text></>
       )}
     </FavoritesContainer>
   );

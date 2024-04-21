@@ -1,9 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import { fetchTeachers } from './operations';
+import { fetchTeachers } from './operations';
 import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 import { InitialState } from '../types';
-import { fetchTeachers } from '../psychologists/operations';
 
 const initialState: InitialState = {
   items: [],

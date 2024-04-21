@@ -25,7 +25,7 @@ export const AuthNavOut: React.FC = () => {
           <NavLinkMenu to="/">Home</NavLinkMenu>
         </li>
         <li>
-          <NavLinkMenu to="/teachers">Teachers</NavLinkMenu>
+          <NavLinkMenu to="/psychologists">Psychologists</NavLinkMenu>
         </li>
         <li>
           <NavLinkMenu to="/favorites">Favorites</NavLinkMenu>
