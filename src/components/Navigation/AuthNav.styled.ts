@@ -59,22 +59,19 @@ export const LogInSvg = styled.img`
 
   width: 20px;
   height: 20px;
-  // stroke: ${({ theme }) => theme.primaryYellow};
 `;
 
 export const LogOutSvg = styled.img`
   width: 20px;
   height: 20px;
-  stroke: ${({ theme }) => theme.primaryYellow};
 `;
 
 export const TextItem = styled.li`
-  border-radius: 12px;
+  border-radius: 30px;
   padding: 14px 14px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
-  border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.primaryYellow};
 `;
 

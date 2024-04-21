@@ -6,10 +6,8 @@ import {
   TextItem,
   NavLinkMenu,
   NavListMenu,
-  LogOutSvg,
 } from './AuthNav.styled';
 import { auth } from '../../firebase';
-import LogOut from '../../assets/icons/log-out.svg?url';
 
 export const AuthNavOut: React.FC = () => {
   const currentUser = auth.currentUser;
@@ -37,7 +35,6 @@ export const AuthNavOut: React.FC = () => {
           <li>
             <LogBtn onClick={handleLogOUt}>
               Log out
-              <LogOutSvg src={LogOut} alt="LogOut" />
             </LogBtn>
           </li>
         </NavList>

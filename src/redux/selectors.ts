@@ -1,10 +1,10 @@
 import { RootState } from "./rootReducer";
 
-const selectTeachers = (state: RootState)=> state.teacher.items;
+const selectTeachers = (state: RootState)=> state.psychologists.items;
  
-const selectIsLoading = (state: RootState)=> state.teacher.isLoading;
+const selectIsLoading = (state: RootState)=> state.psychologists.isLoading;
 
-const selectError = (state: RootState)=> state.teacher.error;
+const selectError = (state: RootState)=> state.psychologists.error;
 
 const selectFavorites = (state: RootState)=> state.favorites.items;
 

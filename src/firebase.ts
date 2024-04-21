@@ -5,14 +5,13 @@ import { getFirestore } from "firebase/firestore";
 
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCzZoPkbBprm3eu5lNt47f1GKMUHoBzPlo",
-  authDomain: "learnlingo1.firebaseapp.com",
-  databaseURL: "https://learnlingo1-default-rtdb.europe-west1.firebasedatabase.app/",
-  projectId: "learnlingo1",
-  storageBucket: "learnlingo1.appspot.com",
-  messagingSenderId: "165391341432",
-  appId: "1:165391341432:web:edff3e5a1bb989f50f9a8d",
-  measurementId: "G-4VXPHQXXJ5"
+  apiKey: "AIzaSyD0o9oWGtHHRcF4lOAX44B0cUj1p8dTOAM",
+  authDomain: "psychologists-eaa63.firebaseapp.com",
+  databaseURL: "https://psychologists-eaa63-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "psychologists-eaa63",
+  storageBucket: "psychologists-eaa63.appspot.com",
+  messagingSenderId: "8293920210",
+  appId: "1:8293920210:web:583c77c6cf5862839d2c0b"
 };
 
 const app = initializeApp(firebaseConfig);
