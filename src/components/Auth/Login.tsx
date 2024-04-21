@@ -48,7 +48,7 @@ export const Login: React.FC<AuthProviderProps> = ({close}) => {
       <Title>Log In</Title>
       <Text>
         Welcome back! Please enter your credentials to access your account and
-        continue your search for an teacher.
+        continue your search for an psychologist.
       </Text>
 
       <Formik

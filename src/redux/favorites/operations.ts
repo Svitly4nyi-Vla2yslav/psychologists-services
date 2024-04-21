@@ -6,13 +6,13 @@ import { db } from '../../firebase.js';
 
 export const addFavorite = createAsyncThunk(
     'favorites/addFavorite',
-    async ({ userId, teacher }: AddFavoritesProps) => {
+    async ({ userId, psychologist }: AddFavoritesProps) => {
         try {
             const userFavoritesRef = ref(db, `users/${userId}/favorites`);
             const existingFavorites = (await get(userFavoritesRef)).val() || {};
             const updatedFavorites = {
                 ...existingFavorites,
-                [teacher.id]: teacher,
+                [psychologist.id]: psychologist,
             };
             await set(userFavoritesRef, updatedFavorites);
         } catch (error) {
@@ -46,11 +46,11 @@ export const fetchFavorites = createAsyncThunk(
 
 export const deleteFavorite = createAsyncThunk(
     'favorites/deleteFavorite',
-    async ({ userId, teacherId }: deleteFavoriteProps) => {
+    async ({ userId, psychologistId }: deleteFavoriteProps) => {
         try {
             const userFavoritesRef = ref(db, `users/${userId}/favorites`);
             const existingFavorites = (await get(userFavoritesRef)).val() || {};
-            delete existingFavorites[teacherId];
+            delete existingFavorites[psychologistId];
             await set(userFavoritesRef, existingFavorites);
         } catch (error) {
             console.error(error);

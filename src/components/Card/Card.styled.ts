@@ -3,9 +3,9 @@ import { FiHeart } from 'react-icons/fi';
 
 export const ImgContainer = styled.div`
   margin: 0 auto;
-  border: 3px solid ${({ theme }) => theme.lightYellow};
+  border: 3px solid ${({ theme }) => theme.orange};
   position: relative;
-  border-radius: 50%;
+  border-radius: 20%;
   padding: 10px;
 
   &::after {
@@ -16,8 +16,8 @@ export const ImgContainer = styled.div`
     border-radius: 50%;
     position: absolute;
     background: #38cd3e;
-    right: 23px;
-    top: 19px;
+    right: 13px;
+    top: 10px;
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -30,7 +30,7 @@ export const ImgContainer = styled.div`
 `;
 
 export const TeacherPhoto = styled.img`
-  border-radius: 50%;
+  border-radius: 20%;
 `;
 
 export const ActiveDot = styled.div`

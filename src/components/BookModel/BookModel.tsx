@@ -27,7 +27,7 @@ import {
 import { BookTrialProps } from '../../redux/types';
 
 export const BookTrialModal: React.FC<BookTrialProps> = ({
-  teacher,
+  psychologist,
   close,
 }) => {
   const [nameEntered, setNameEntered] = useState(false);
@@ -59,16 +59,16 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
       </BookTrialText>
       <TeacherBlock>
         <TeacherPhoto
-          src={teacher.avatar_url}
+          src={psychologist.avatar_url}
           loading="lazy"
           alt="avatar"
           width="44"
           height="44"
         />
         <TeacherNameBlock>
-          <SomeText>Your teacher</SomeText>
+          <SomeText>Your psychologist</SomeText>
           <TeacherName>
-            {teacher.name} {teacher.surname}
+            {psychologist.name} {psychologist.surname}
           </TeacherName>
         </TeacherNameBlock>
       </TeacherBlock>

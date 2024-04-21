@@ -15,7 +15,6 @@ import {
   InfoHeader,
   ItemInfo,
   ItemText,
-  LangBlock,
   LevelItem,
   LevelList,
   ListInfo,
@@ -43,8 +42,8 @@ import { BookTrialModal } from '../BookModel/BookModel';
 import { Teacher } from '../../redux/types';
 import { AppDispatch } from '../../redux/store';
 
-export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
-  teacher,
+export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
+  psychologist,
   authUser,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,8 +58,8 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
     setIsOpen(prevState => !prevState);
   };
 
-  const handleBookTrialClick = (teacher: Teacher) => {
-    setSelectedTeacher(teacher);
+  const handleBookTrialClick = (psychologist: Teacher) => {
+    setSelectedTeacher(psychologist);
     toggleModal();
   };
 
@@ -68,26 +67,26 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
     setIsOpen(false);
   };
 
-  const handleReadMoreClick = (teacherId: string) => {
-    setExpandedTeacherId(prevId => (prevId === teacherId ? null : teacherId));
+  const handleReadMoreClick = (psychologistId: string) => {
+    setExpandedTeacherId(prevId => (prevId === psychologistId ? null : psychologistId));
   };
 
-  const getButtonText = (teacherId: string) =>
-    expandedTeacherId === teacherId ? 'Hide more' : 'Read More';
+  const getButtonText = (psychologistId: string) =>
+    expandedTeacherId === psychologistId ? 'Hide more' : 'Read More';
 
   const isFavorite =
     favorites &&
     favorites.some(
-      favorTeacher => favorTeacher && favorTeacher.id === teacher.id
+      favorTeacher => favorTeacher && favorTeacher.id === psychologist.id
     );
 
   const onSwitchFavorite = () => {
     if (authUser) {
       if (!isFavorite) {
-        dispatch(addFavorite({ userId: authUser.uid, teacher }));
+        dispatch(addFavorite({ userId: authUser.uid, psychologist }));
       } else {
         dispatch(
-          deleteFavorite({ userId: authUser.uid, teacherId: teacher.id })
+          deleteFavorite({ userId: authUser.uid, psychologistId: psychologist.id })
         );
       }
     } else {
@@ -101,7 +100,7 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
     <>
       <ImgContainer>
         <TeacherPhoto
-          src={teacher.avatar_url}
+          src={psychologist.avatar_url}
           loading="lazy"
           alt="avatar"
           width="96"
@@ -110,23 +109,19 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
       </ImgContainer>
       <InfoContainer>
         <InfoHeader>
-          <Text>Languages</Text>
+          <Text>Psychologist</Text>
           <DataList>
             <DataItem>
-              <ElementsContainer>
-                {' '}
-                {/* <Book src={BookSvg} alt="📖" />  */}Lessons online
-              </ElementsContainer>
+              
             </DataItem>
-            <DataItem>Lessons done: {teacher.lessons_done}</DataItem>
             <DataItem>
               <ElementsContainer>
                 {' '}
-                <Star src={StarSvg} alt="⭐" /> Rating: {teacher.rating}
+                <Star src={StarSvg} alt="⭐" /> Rating: {psychologist.rating}
               </ElementsContainer>
             </DataItem>
             <DataItem>
-              Price / 1 hour: <Price>{teacher.price_per_hour}$</Price>
+              Price / 1 hour: <Price>{psychologist.price_per_hour}$</Price>
             </DataItem>
             <li>
               {' '}
@@ -139,15 +134,15 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
 
         <NameTitle>
           {' '}
-          {teacher.name} {teacher.surname}{' '}
+          {psychologist.name} {psychologist.surname}{' '}
         </NameTitle>
         <ListInfo>
           <ItemInfo>
             <Block>
-              <ItemText>Speaks: &nbsp;</ItemText>
-              <LangBlock>
-                {teacher.languages ? (
-                  teacher.languages.map((language, index, array) => (
+              <ItemText>Experience: {psychologist.experience} </ItemText>
+              {/* <LangBlock>
+                {psychologist.languages ? (
+                  psychologist.languages.map((language, index, array) => (
                     <React.Fragment key={language}>
                       <li>{language}</li>
                       {index < array.length - 1 && <span>, &nbsp;</span>}
@@ -156,22 +151,22 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
                 ) : (
                   <li>No languages available</li>
                 )}
-              </LangBlock>
+              </LangBlock> */}
             </Block>
           </ItemInfo>
           <ItemInfo>
-            <ItemText>Lesson info:</ItemText> {teacher.lesson_info}
+            <ItemText>Lesson info:</ItemText> {psychologist.lesson_info}
           </ItemInfo>
           <ItemInfo>
-            <ItemText>Conditions:</ItemText> {teacher.conditions}
+            <ItemText>Conditions:</ItemText> {psychologist.conditions}
           </ItemInfo>
         </ListInfo>
-        {expandedTeacherId === teacher.id && (
+        {expandedTeacherId === psychologist.id && (
           <div>
-            <ExpText>{teacher.experience}</ExpText>
+            <ExpText>{psychologist.experience}</ExpText>
             <ReviewList>
-              {teacher.reviews ? (
-                teacher.reviews.map((review, index) => (
+              {psychologist.reviews ? (
+                psychologist.reviews.map((review, index) => (
                   <li key={index}>
                     <Reviewblock>
                       <ReviewerImg
@@ -198,13 +193,13 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
             </ReviewList>
           </div>
         )}
-        <BtnMore onClick={() => handleReadMoreClick(teacher.id)}>
+        <BtnMore onClick={() => handleReadMoreClick(psychologist.id)}>
           {' '}
-          {getButtonText(teacher.id)}
+          {getButtonText(psychologist.id)}
         </BtnMore>
         <LevelList>
-          {teacher.levels ? (
-            teacher.levels.map((level, index) => (
+          {psychologist.levels ? (
+            psychologist.levels.map((level, index) => (
               <LevelItem key={index}>
                 <p>{level}</p>
               </LevelItem>
@@ -213,15 +208,15 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
             <li>No levels</li>
           )}
         </LevelList>
-        {expandedTeacherId === teacher.id && (
-          <BookBtn type="button" onClick={() => handleBookTrialClick(teacher)}>
+        {expandedTeacherId === psychologist.id && (
+          <BookBtn type="button" onClick={() => handleBookTrialClick(psychologist)}>
             Book trial lesson
           </BookBtn>
         )}
       </InfoContainer>
       {isOpen && selectedTeacher && (
         <Modal toggleModal={toggleModal}>
-          <BookTrialModal teacher={selectedTeacher} close={close} />
+          <BookTrialModal psychologist={selectedTeacher} close={close} />
         </Modal>
       )}
     </>

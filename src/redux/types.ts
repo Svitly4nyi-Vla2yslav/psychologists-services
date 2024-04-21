@@ -55,17 +55,17 @@ export interface BookTrialProps {
   avatarUrl?: string;
   id?: string;
   close: () => void;
-  teacher: Teacher;
+  psychologist: Teacher;
 }
 
 export interface AddFavoritesProps {
   userId: string | string[];
-  teacher: Teacher;
+  psychologist: Teacher;
 }
 
 export interface deleteFavoriteProps {
   userId: string | string[];
-  teacherId: string;
+  psychologistId: string;
 }
 export interface AuthProviderProps {
   close: () => void;

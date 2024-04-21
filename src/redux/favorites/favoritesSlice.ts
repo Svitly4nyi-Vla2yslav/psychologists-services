@@ -37,17 +37,17 @@ export const favoritesSlice = createSlice({
             .addCase(addFavorite.pending, handlePending)
             .addCase(addFavorite.fulfilled, (state, action) => {
                 state.isLoading = false;
-                const teacher = action.payload as unknown as Teacher; 
-                if (teacher) {
-                    state.items.push(teacher);
+                const psychologist = action.payload as unknown as Teacher; 
+                if (psychologist) {
+                    state.items.push(psychologist);
                 }
             })
             
             .addCase(deleteFavorite.fulfilled, (state, action) => {
                 state.isLoading = false;
-                const teacher = action.payload as unknown as Teacher;
-                if (teacher) {
-                    state.items = state.items.filter((item) => item.id !== teacher.id);
+                const psychologist = action.payload as unknown as Teacher;
+                if (psychologist) {
+                    state.items = state.items.filter((item) => item.id !== psychologist.id);
                 }
             })
             .addCase(deleteFavorite.rejected, handleRejected);

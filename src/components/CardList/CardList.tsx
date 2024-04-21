@@ -8,9 +8,9 @@ export const CardList: React.FC<CardListProps> = ({ authUser, psychologists }) =
     <ListWrapper>
       {psychologists &&
         Array.isArray(psychologists) &&
-        psychologists.map(teacher => (
-          <CardItem key={teacher?.id}>
-            {teacher && <Card authUser={authUser} teacher={teacher} />}
+        psychologists.map(psychologist => (
+          <CardItem key={psychologist?.id}>
+            {psychologist && <Card authUser={authUser} psychologist={psychologist} />}
           </CardItem>
         ))}
     </ListWrapper>

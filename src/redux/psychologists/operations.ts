@@ -10,10 +10,10 @@ export const fetchTeachers = createAsyncThunk(
       try {
         const snapshot = await get(child(dbRef, 'psychologists'));
         const psychologistsData: Teacher[] = [];
-        snapshot.forEach((teacherSnapshot) => {
+        snapshot.forEach((psychologistSnapshot) => {
           psychologistsData.push({
-            ...teacherSnapshot.val(),
-            id: teacherSnapshot.key,
+            ...psychologistSnapshot.val(),
+            id: psychologistSnapshot.key,
           });
         });
         return psychologistsData;
