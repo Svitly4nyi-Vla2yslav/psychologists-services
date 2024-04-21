@@ -2,6 +2,7 @@ import {
   HomeContainer,
   ImageContainer,
   ImgGirlSvg,
+  ImgHomePage,
   InfoContainer,
   Lang,
   LinkStart,
@@ -10,7 +11,7 @@ import {
   Title,
 } from './HomePage.styled';
 import Girl from '../../assets/image/imagehero.png';
-
+import block from "../../assets/image/block.png"
 const Home: React.FC = () => {
   return (
     <HomeContainer>
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
         </StartContainer>
         <ImageContainer>
           <ImgGirlSvg src={Girl} alt="Girl" />
+          <ImgHomePage src={block} alt='block' />
         </ImageContainer>
       </InfoContainer>
      

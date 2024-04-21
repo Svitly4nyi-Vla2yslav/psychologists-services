@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 
 export const HomeContainer = styled.div`
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0 auto;
+ 
+
+//  @media screen and (min-width: 1440px) {
+//   width: 100%;
+// }
 `;
 
 export const InfoContainer = styled.div`
@@ -87,7 +90,7 @@ export const Text = styled.p`
   margin-bottom: 64px;
   text-align: center;
 
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     width: 471px;
     text-align: start;
   }
@@ -144,19 +147,39 @@ export const ImgGirlSvg = styled.img`
   }
 `;
 
-export const ImgMacYellSvg = styled.img`
+export const ImgHomePage = styled.img`
   position: absolute;
-  left: 0;
-  top: 270px;
+  top: 420px;
+    left: 15px;
   z-index: 1;
-  width: 250px;
-
+  width: 311px;
+height: 118px;
   @media screen and (min-width: 1140px) {
-    top: 354px;
-    left: 105px;
+    top: 420px;
+    left: 15px;
     width: auto;
   }
 `;
+
+export const QuestionIcon = styled.img`
+position: absolute;
+  top: 420px;
+    left: 15px;
+  z-index: 1;
+`;
+
+export const ContactIcon = styled.img`
+position: absolute;
+  top: 420px;
+    left: 15px;
+  z-index: 1;
+`;
+
+export const ArrowIcon = styled.img`
+
+`;
+
+
 
 // ------------BENEFITS--------------------------
 

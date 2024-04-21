@@ -6,8 +6,6 @@ export const LayoutWrap = styled.div`
  min-width: 320px;
   max-width: 1440px;
   padding-top: 20px;
-  padding-left:15px;
-  padding-right: 15px;
   margin: 0 auto;
 
 `;
