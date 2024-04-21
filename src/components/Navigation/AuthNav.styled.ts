@@ -18,18 +18,20 @@ export const NavList = styled.ul`
 `;
 
 export const RegBtn = styled.button`
-  border-radius: 12px;
-  padding: 14px 39px;
-  width: 166px;
-  height: 48px;
-  background: ${({ theme }) => theme.primaryBlack};
+  color: ${({ theme }) => theme.orange};
+  background: ${({ theme }) => theme.primaryYellow};
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
-  color: #fff;
+
+  border-radius: 30px;
+  padding: 14px 40px;
+  width: 171px;
+  height: 48px;
 
   &:hover {
-    background: #8a8a89;
+    color: ${({ theme }) => theme.orange};
+    background: ${({ theme }) => theme.lightYellow};
   }
 `;
 
@@ -43,17 +45,21 @@ export const LogBtn = styled.button`
   display: flex;
   align-items: center;
   gap: 8px;
+  border: 1px solid gray;
+    border-radius: 30px;
+    padding: 14px 40px;
 
   &:hover {
-    scale: 1.1;
-   color:  ${({ theme }) => theme.primaryYellow}
+    color: ${({ theme }) => theme.orange};
+    background: ${({ theme }) => theme.lightYellow};
   }
 `;
 
 export const LogInSvg = styled.img`
+
   width: 20px;
   height: 20px;
-  stroke: ${({ theme }) => theme.primaryYellow};
+  // stroke: ${({ theme }) => theme.primaryYellow};
 `;
 
 export const LogOutSvg = styled.img`

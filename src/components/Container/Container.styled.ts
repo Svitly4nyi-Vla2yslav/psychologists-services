@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.main`
-margin-left: auto;
+margin-left: 0;
 margin-right: auto;
 // padding: 0px 16px;
 width: 320px;
@@ -16,6 +16,6 @@ width: 320px;
 
 @media screen and (min-width: 1440px) {
   width: 1440px;
-  // padding: 0px 64px;
+  // padding: 0px 128px;
 }
 `;

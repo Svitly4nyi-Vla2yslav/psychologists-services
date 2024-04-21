@@ -1,13 +1,11 @@
 import {
   AuthContainer,
   LogBtn,
-  LogInSvg,
   NavList,
   RegBtn,
   NavLinkMenu,
   NavListMenu,
 } from './AuthNav.styled';
-import LogIn from '../../assets/icons/log-in-01.svg';
 import { AuthNavInProps } from '../../redux/types';
 
 export const AuthNavIn: React.FC<AuthNavInProps> = ({
@@ -28,7 +26,6 @@ export const AuthNavIn: React.FC<AuthNavInProps> = ({
         <NavList>
           <li>
             <LogBtn type="button" onClick={onClickLogin}>
-              <LogInSvg src={LogIn} alt="Login" />
               Log in
             </LogBtn>
           </li>

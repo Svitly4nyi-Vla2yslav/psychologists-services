@@ -14,11 +14,11 @@ export const HomeContainer = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  margin-top: 20px;
+  margin-top: 102px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 126px;
   justify-content: center;
 `;
 
@@ -44,7 +44,6 @@ export const StartContainer = styled.div`
     min-width: 330px;
     max-width: 595px;
     height: 530px;
-    padding-left: 70px;
     display: block;
   }
 `;
@@ -136,11 +135,9 @@ export const ImageContainer = styled.div`
 export const ImgGirlSvg = styled.img`
   left: 25%;
   width: 250px;
-  margin-top: 50px;
 
   @media screen and (min-width: 1140px) {
-    margin-left: 114px;
-    margin-top: 80px;
+ 
     border-radius: 10px;
     width: 464px;
     height: 526px;
@@ -149,37 +146,46 @@ export const ImgGirlSvg = styled.img`
 
 export const ImgHomePage = styled.img`
   position: absolute;
-  top: 420px;
-    left: 15px;
+  top: 337px;
+  left: -100px;
   z-index: 1;
   width: 311px;
 height: 118px;
   @media screen and (min-width: 1140px) {
-    top: 420px;
-    left: 15px;
+    top: 337px;
+    left: -100px;
     width: auto;
   }
 `;
 
 export const QuestionIcon = styled.img`
 position: absolute;
-  top: 420px;
-    left: 15px;
+top: 176px;
+    left: -33px;
   z-index: 1;
 `;
 
 export const ContactIcon = styled.img`
 position: absolute;
-  top: 420px;
-    left: 15px;
-  z-index: 1;
+top: -121px;
+left: 463px;
+  z-index: 13;
+  width: 48px;
 `;
 
 export const ArrowIcon = styled.img`
 
 `;
 
+export const IconContainer = styled.div`
+position: absolute;
+top: 190px;
+left: -15px;
+  z-index: 1;
+  color: #fbfbfb;
+  width: 48px;
 
+`;
 
 // ------------BENEFITS--------------------------
 
