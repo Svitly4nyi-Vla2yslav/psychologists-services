@@ -21,7 +21,7 @@ margin-bottom: 30px;
 
 
 @media screen and (min-width: 768px) {
-  max-width: 1184px;
+  width: 81%;
   margin: 0 auto;
   justify-content: space-between;;
   gap: 0px;
@@ -52,4 +52,9 @@ export const NavLinkLogo = styled(Link)`
     scale: 1.1;
    color:  ${({ theme }) => theme.primaryYellow}
   }
+`;
+
+export const Line = styled.div`
+border-bottom : 1px solid #8080804f;
+padding-bottom: 24px;
 `;

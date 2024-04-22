@@ -181,15 +181,21 @@ export const NameTitle = styled.h2`
 
 export const ListInfo = styled.ul`
   margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
 `;
 
 export const ItemInfo = styled.li`
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  height: 40px;
+  border-radius: 24px;
+padding: 8px 16px;
+background: #f3f3f3;
+// width: 100%;
 `;
 
 export const ItemText = styled.span`
@@ -203,8 +209,17 @@ export const LangBlock = styled.ul`
 `;
 
 export const Block = styled.div`
-  display: flex;
+  // display: flex;
 `;
+
+export const About = styled.p`
+font-weight: 400;
+font-size: 16px;
+
+// line-height: 20px; 
+line-height: 1.25;
+color: rgba(25, 26, 21, 0.5);
+`
 
 export const BtnMore = styled.button`
   font-weight: 500;
@@ -253,7 +268,6 @@ export const ReviewRating = styled.div`
 export const LevelList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 32px;
   gap: 8px;
 `;
 
@@ -283,18 +297,20 @@ export const ReviewText = styled.p`
 `;
 
 export const BookBtn = styled.button`
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
   // line-height: 156%;
-  border-radius: 12px;
-  // padding: 16px 48px;
-  width: 232px;
-  height: 60px;
+  border-radius: 30px;
+ padding: 14px 32px;
+  width: 227px;
+height: 48px;
+  color: ${({ theme }) => theme.orange};
   background: ${({ theme }) => theme.primaryYellow};
   margin-top: 32px;
 
-  &:hover {
-    background: ${({ theme }) => theme.primaryLightYellow};
+   &:hover {
+    color: ${({ theme }) => theme.orange};
+    background: ${({ theme }) => theme.lightYellow};
   }
 `;
 

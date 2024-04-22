@@ -3,6 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import {
   HeaderContainer,
   LayoutWrap,
+  Line,
   NavLinkLogo,
   NavList,
 } from './Layout.styled';
@@ -57,6 +58,7 @@ export const Layout: React.FC<LayoutProps> = ({ authUser }) => {
           onClickRegister={onClickRegister}
         />
       </HeaderContainer>
+      <Line></Line>
       <Suspense>
         <Outlet />
       </Suspense>

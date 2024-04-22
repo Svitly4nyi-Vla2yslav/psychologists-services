@@ -9,18 +9,20 @@ export const TeachersContainer = styled.div`
 `;
 
 export const LoadMoreBtn = styled.button`
-  font-weight: 700;
-font-size: 18px;
+  font-weight: 500;
+font-size: 16px;
 line-height: 156%;
-border-radius: 12px;
-padding: 16px 48px;
-width: 232px;
-height: 60px;
-background: ${({ theme }) => theme.primaryYellow};
+border-radius: 30px;
+padding: 14px 48px;
+width: 176px;
+height: 48px;
+ color: ${({ theme }) => theme.orange};
+  background: ${({ theme }) => theme.primaryYellow};
 margin-bottom: 32px;
 margin-top: 32px;
 
 &:hover {
-  background: ${({theme}) => theme.primaryLightYellow};
+ color: ${({ theme }) => theme.orange};
+    background: ${({ theme }) => theme.lightYellow};
 }
 `;

@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Inter', sans-serif;
     color: ${({ theme }) => theme.primaryBlack};
-    background-color:#ffffff;
+    background-color: #f9f7f7;
     height: 100%;
     width: 100%;
     font-size: 100%;

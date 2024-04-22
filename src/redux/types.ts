@@ -22,8 +22,8 @@ export interface CardListProps{
 }
 export interface Review {
   photo: string | undefined;
-  reviewer_name: string;
-  reviewer_rating: number;
+  reviewer: string;
+  rating: number;
   comment: string;
 }
 
@@ -36,12 +36,14 @@ export interface Teacher {
   rating: number;
   reviews: Review[];
   price_per_hour: number;
-  lessons_done: number;
   avatar_url: string;
-  lesson_info: string;
   conditions: string[];
   experience: string;
   favorite: boolean;
+  license: string;
+  specialization: string;
+  initial_consultation: string;
+  about: string;
 }
 
 export interface InitialState {

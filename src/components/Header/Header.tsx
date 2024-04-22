@@ -5,7 +5,7 @@ import { HeaderContainer, HeaderWrap,  NavWrap, UserContainer, Wrapper } from '.
 
 const Header: React.FC = () => {
   return (
-    <div>  <Wrapper>
+    <div>  <Wrapper >
     <HeaderContainer>
       <HeaderWrap>
           <UserContainer>

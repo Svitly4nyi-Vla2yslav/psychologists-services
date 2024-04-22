@@ -14,7 +14,7 @@ export const HomeContainer = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  margin-top: 102px;
+  margin-top: 78px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -209,6 +209,7 @@ background-image: url();
     height: 100%;
     padding: 25px;
     margin-left: 0px;
+    
   }
 
   @media screen and (min-width: 1400px) {
@@ -231,6 +232,7 @@ export const BenefitsList = styled.ul`
     justify-content: space-between;
     flex-direction: row;
     gap: 0;
+    
   }
 `;
 

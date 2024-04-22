@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  About,
   Block,
   BookBtn,
   BtnMore,
@@ -139,27 +140,20 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
         <ListInfo>
           <ItemInfo>
             <Block>
-              <ItemText>Experience: {psychologist.experience} </ItemText>
-              {/* <LangBlock>
-                {psychologist.languages ? (
-                  psychologist.languages.map((language, index, array) => (
-                    <React.Fragment key={language}>
-                      <li>{language}</li>
-                      {index < array.length - 1 && <span>, &nbsp;</span>}
-                    </React.Fragment>
-                  ))
-                ) : (
-                  <li>No languages available</li>
-                )}
-              </LangBlock> */}
+              <ItemText>Experience:  </ItemText>{psychologist.experience}
+             
             </Block>
           </ItemInfo>
           <ItemInfo>
-            <ItemText>Lesson info:</ItemText> {psychologist.lesson_info}
+            <ItemText>License:</ItemText> {psychologist.license}
           </ItemInfo>
           <ItemInfo>
-            <ItemText>Conditions:</ItemText> {psychologist.conditions}
+            <ItemText>Specialisation:</ItemText> {psychologist.specialization}
           </ItemInfo>
+          <ItemInfo>
+            <ItemText>Initial_consultation:</ItemText> {psychologist.initial_consultation}
+          </ItemInfo>
+          <About>{psychologist.about} </About>
         </ListInfo>
         {expandedTeacherId === psychologist.id && (
           <div>
@@ -177,10 +171,10 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
                         loading="lazy"
                       />
                       <ReviewRating>
-                        <p>{review.reviewer_name}</p>
+                        <p>{review.reviewer}</p>
                         <RatingBlock>
                           <Star />
-                          <p> {review.reviewer_rating} ⭐</p>
+                          <p> {review.rating} ⭐</p>
                         </RatingBlock>
                       </ReviewRating>
                     </Reviewblock>
@@ -205,12 +199,12 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
               </LevelItem>
             ))
           ) : (
-            <li>No levels</li>
+            <li></li>
           )}
         </LevelList>
         {expandedTeacherId === psychologist.id && (
           <BookBtn type="button" onClick={() => handleBookTrialClick(psychologist)}>
-            Book trial lesson
+            Make an appointment
           </BookBtn>
         )}
       </InfoContainer>

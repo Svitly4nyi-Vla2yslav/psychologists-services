@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 
 export const Wrapper = styled.div`
@@ -18,7 +18,7 @@ export const HeaderContainer = styled.header`
 
   padding-top: 24px;
   padding-bottom: 24px;
-  
+ 
 `;
 
 export const HeaderWrap = styled.div`
@@ -30,6 +30,7 @@ export const HeaderWrap = styled.div`
 
 export const NavWrap = styled.nav`
   margin-right: 12px;
+  
 `;
 
 export const UserContainer = styled.div`
@@ -44,4 +45,5 @@ export const UserBarWrapper = styled.div`
   display: flex;
   gap: 16px;
   align-items: center;
+ 
 `;

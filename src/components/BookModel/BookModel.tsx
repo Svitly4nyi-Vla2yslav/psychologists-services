@@ -4,9 +4,6 @@ import {
   BookTrialText,
   BookTrialTitle,
   FormTitle,
-  RadioBlock,
-  RadioBtnField,
-  RadioBtnLabel,
   SomeText,
   TeacherBlock,
   TeacherName,
@@ -34,15 +31,14 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
   const [emailEntered, setEmailEntered] = useState(false);
   const [phoneEntered, setPhoneEntered] = useState(false);
   const BookLessonSchema = Yup.object().shape({
-    picked: Yup.string().required(
-      'Please select a reason for learning English'
-    ),
     fullname: Yup.string()
       .min(2, 'Too Short!')
       .max(20, 'Too Long!')
       .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
+    time: Yup.string().required(),
     phoneNuber: Yup.number().min(8, 'Too Short!').required('Required'),
+    comment: Yup.string().required(),
   });
 
   const handleSubmit = () => {
@@ -52,10 +48,11 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
 
   return (
     <BookTrailContainer>
-      <BookTrialTitle>Book trial lesson</BookTrialTitle>
+      <BookTrialTitle>Make an appointment with a psychologists</BookTrialTitle>
       <BookTrialText>
-        Our experienced tutor will assess your current language level, discuss
-        your learning goals, and tailor the lesson to your specific needs.
+        You are on the verge of changing your life for the better. Fill out the
+        short form below to book your personal appointment with a professional
+        psychologist. We guarantee confidentiality and respect for your privacy.
       </BookTrialText>
       <TeacherBlock>
         <TeacherPhoto
@@ -66,68 +63,27 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
           height="44"
         />
         <TeacherNameBlock>
-          <SomeText>Your psychologist</SomeText>
+          <SomeText>Your psychologists</SomeText>
           <TeacherName>
             {psychologist.name} {psychologist.surname}
           </TeacherName>
         </TeacherNameBlock>
       </TeacherBlock>
-      <FormTitle>What is your main reason for learning English?</FormTitle>
+      <FormTitle></FormTitle>
       <Formik
         initialValues={{
-          picked: '',
           fullname: '',
           email: '',
           phoneNuber: '',
+          time: "",
+          comment: "",
         }}
         onSubmit={handleSubmit}
         validationSchema={BookLessonSchema}
       >
         {({}) => (
           <FormStyle>
-            <RadioBlock role="group" aria-labelledby="my-radio-group">
-              <RadioBtnLabel>
-                <RadioBtnField
-                  type="radio"
-                  name="picked"
-                  value="Career and business"
-                />
-                Career and business
-              </RadioBtnLabel>
-              <RadioBtnLabel>
-                <RadioBtnField
-                  type="radio"
-                  name="picked"
-                  value="Lesson for kids"
-                />
-                Lesson for kids
-              </RadioBtnLabel>
-              <RadioBtnLabel>
-                <RadioBtnField
-                  type="radio"
-                  name="picked"
-                  value="Living abroadwo"
-                />
-                Living abroad
-              </RadioBtnLabel>
-              <RadioBtnLabel>
-                <RadioBtnField
-                  type="radio"
-                  name="picked"
-                  value="Exams and coursework"
-                />
-                Exams and coursework
-              </RadioBtnLabel>
-              <RadioBtnLabel>
-                <RadioBtnField
-                  type="radio"
-                  name="picked"
-                  value="Culture, travel or hobby"
-                />
-                Culture, travel or hobby
-              </RadioBtnLabel>
-              <ErrMsg name="picked" component="div" />
-            </RadioBlock>
+           
             <FieldStyle
               name="fullname"
               placeholder={nameEntered ? '' : 'Full Name'}
@@ -148,7 +104,7 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
               onFocus={() => setPhoneEntered(true)}
             />
             <ErrMsg name="phoneNuber" component="div" />
-            <BtnSubmit type="submit">Book</BtnSubmit>
+            <BtnSubmit type="submit">Send</BtnSubmit>
           </FormStyle>
         )}
       </Formik>

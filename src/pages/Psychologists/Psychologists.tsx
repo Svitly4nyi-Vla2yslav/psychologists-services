@@ -21,10 +21,10 @@ const Teacher: React.FC<TeachersProps> = ({ authUser}) => {
   const psychologists = useSelector(selectTeachers);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-  const [visibleTeachers, setVisibleTeachers] = useState(4);
+  const [visibleTeachers, setVisibleTeachers] = useState(3);
 
   const loadMoreTeachers = () => {
-    setVisibleTeachers((prevVisibleTeachers) => prevVisibleTeachers + 4);
+    setVisibleTeachers((prevVisibleTeachers) => prevVisibleTeachers + 3);
   };
 
   useEffect(() => {
