@@ -1,10 +1,10 @@
-import{u as i,g as c,h as s,r as d,k as l,j as t,c as p}from"./index-cfa7f1df.js";import{c as x,d as g,e as f,M as m,C as v}from"./Loader-06a81ae0.js";const h=i.div`
+import{u as i,g as c,h as s,r as d,k as l,j as t,c as p}from"./index-646c3408.js";import{c as x,d as g,e as f,M as m,C as v}from"./Loader-c0bff545.js";const h=i.div`
 padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: #f8f8f899;
   padding-bottom: 50px;
 `,F=i.p`
   font-weight: 500;
