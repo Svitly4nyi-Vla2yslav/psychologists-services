@@ -1,15 +1,15 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { child, get} from "firebase/database";
 import { dbRef } from '../../firebase';
-import { Teacher } from "../types";
+import { Psychologist } from "../types";
 
 
-export const fetchTeachers = createAsyncThunk(
+export const fetchPsychologists = createAsyncThunk(
     'psychologists/fetchAll',
     async (_, thunkAPI) => {
       try {
         const snapshot = await get(child(dbRef, 'psychologists'));
-        const psychologistsData: Teacher[] = [];
+        const psychologistsData: Psychologist[] = [];
         snapshot.forEach((psychologistSnapshot) => {
           psychologistsData.push({
             ...psychologistSnapshot.val(),

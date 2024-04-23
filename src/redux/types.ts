@@ -18,7 +18,7 @@ export interface UserData {
 
 export interface CardListProps{
   authUser: () => void;
-   psychologists: Teacher;
+   psychologists: Psychologist;
 }
 export interface Review {
   photo: string | undefined;
@@ -27,7 +27,7 @@ export interface Review {
   comment: string;
 }
 
-export interface Teacher {
+export interface Psychologist {
   id?: string | any;
   name: string;
   surname: string;
@@ -47,7 +47,7 @@ export interface Teacher {
 }
 
 export interface InitialState {
-  items: Teacher[];
+  items: Psychologist[];
   isLoading: boolean;
   error: string | null;
 };
@@ -57,12 +57,12 @@ export interface BookTrialProps {
   avatarUrl?: string;
   id?: string;
   close: () => void;
-  psychologist: Teacher;
+  psychologist: Psychologist;
 }
 
 export interface AddFavoritesProps {
   userId: string | string[];
-  psychologist: Teacher;
+  psychologist: Psychologist;
 }
 
 export interface deleteFavoriteProps {
@@ -90,4 +90,18 @@ export interface ModalProps {
 export interface AuthNavInProps {
   onClickLogin: () => void;
   onClickRegister: () => void;
+}
+
+export interface RootStates {
+  psychologists: {
+    items: Psychologist[];
+    isLoading: boolean;
+    error: string | null;
+    all: Psychologist[];
+    showed: Psychologist[];
+  };
+  favorites: Psychologist[];
+  filter: string; 
+  filterFav: string; 
+  shoLoadMore: boolean;
 }

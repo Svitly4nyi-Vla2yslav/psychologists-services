@@ -118,18 +118,19 @@ margin-top: -10px;
 
 export const BtnSubmit = styled.button`
 margin-top: 22px;
-border-radius: 12px;
+border-radius: 30px;
 padding: 16px;
 width: 100%;
 height: 60px;
-background: ${({ theme }) => theme.primaryYellow};
+
 font-weight: 700;
 font-size: 18px;
 line-height: 1.56;
-color: ${({ theme }) => theme.primaryBlack};
-
+color: ${({ theme }) => theme.orange};
+background: ${({ theme }) => theme.primaryYellow};
 &:hover {
-  background: ${({ theme }) => theme.primaryLightYellow};
+  color: ${({ theme }) => theme.orange};
+    background: ${({ theme }) => theme.lightYellow};
 }
 
 @media screen and (min-width: 768px) {

@@ -6,8 +6,8 @@ export const ListWrapper = styled.ul`
  flex-direction: column;
  justify-content: center;
  align-items: center;
- /* min-width: 320px;
- max-width: 1184px; */
+//   min-width: 320px;
+//  max-width: 1184px; 
  gap: 48px;
  
  @media screen and (min-width: 768px) {
@@ -17,8 +17,8 @@ export const ListWrapper = styled.ul`
 `;
 
 export const CardItem = styled.li`
-  /* width: 100%; */
- width: 280px;
+   width: 95%; 
+//  width: 280px;
   padding: 15px;
   display: flex;
 flex-wrap: wrap;
@@ -28,7 +28,7 @@ background: #fff;
 
 @media screen and (min-width: 768px) {
   gap: 48px;
-width: 100%;
+width: 95%;
 }
 
 

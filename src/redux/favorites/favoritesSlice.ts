@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import persistReducer from 'redux-persist/es/persistReducer';
 import storage from 'redux-persist/lib/storage';
 import { addFavorite, deleteFavorite } from "./operations";
-import { InitialState, Teacher } from "../types";
+import { InitialState, Psychologist } from "../types";
 
 
 const initialState: InitialState = {
@@ -37,7 +37,7 @@ export const favoritesSlice = createSlice({
             .addCase(addFavorite.pending, handlePending)
             .addCase(addFavorite.fulfilled, (state, action) => {
                 state.isLoading = false;
-                const psychologist = action.payload as unknown as Teacher; 
+                const psychologist = action.payload as unknown as Psychologist; 
                 if (psychologist) {
                     state.items.push(psychologist);
                 }
@@ -45,7 +45,7 @@ export const favoritesSlice = createSlice({
             
             .addCase(deleteFavorite.fulfilled, (state, action) => {
                 state.isLoading = false;
-                const psychologist = action.payload as unknown as Teacher;
+                const psychologist = action.payload as unknown as Psychologist;
                 if (psychologist) {
                     state.items = state.items.filter((item) => item.id !== psychologist.id);
                 }

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchTeachers } from './operations';
+import { fetchPsychologists } from './operations';
 import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 import { InitialState } from '../types';
@@ -25,22 +25,43 @@ export const psychologistsSlice = createSlice({
 
   extraReducers: builder => {
     builder
-      .addCase(fetchTeachers.pending, handlePending)
-      .addCase(fetchTeachers.fulfilled, (state, action) => {
+      .addCase(fetchPsychologists.pending, handlePending)
+      .addCase(fetchPsychologists.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
       })
-      .addCase(fetchTeachers.rejected, handleRejected);
+      .addCase(fetchPsychologists.rejected, handleRejected);
   },
 });
+
+export const setShowLoadMore = (value: boolean) => {
+  return {
+    type: "loadMore/set",
+    payload: value,
+  };
+};
+
+export const setFilter = (value: string) => {
+  return {
+    type: "filter/set",
+    payload: value,
+  };
+};
+
+export const setFilterFav = (value: string) => {
+  return {
+    type: "filterFav/set",
+    payload: value,
+  };
+};
 
 const persistConfig = {
   key: "psychologists",
   storage,
 };
 
-export const persistedTeacherReducer = persistReducer(
+export const persistedPsychologistReducer = persistReducer(
   persistConfig,
   psychologistsSlice.reducer
 );

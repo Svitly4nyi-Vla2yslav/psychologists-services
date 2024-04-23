@@ -28,7 +28,7 @@ import {
   Reviewblock,
   ReviewerImg,
   Star,
-  TeacherPhoto,
+  PsychologistPhoto,
   Text,
 } from './Card.styled';
 // import BookSvg from '../../assets/icons/book-open.svg?url';
@@ -39,19 +39,20 @@ import { selectFavorites } from '../../redux/selectors';
 import { addFavorite, deleteFavorite } from '../../redux/favorites/operations';
 import toast from 'react-hot-toast';
 import { Modal } from '../Modal/Modal';
-import { BookTrialModal } from '../BookModel/BookModel';
-import { Teacher } from '../../redux/types';
+// import { BookTrialModal } from '../BookModel/ModalForm';
+import { Psychologist } from '../../redux/types';
 import { AppDispatch } from '../../redux/store';
+import { BookTrialModal } from '../BookModel/BookModel';
 
-export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
+export const Card: React.FC<{ psychologist: Psychologist; authUser: any }> = ({
   psychologist,
   authUser,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedTeacherId, setExpandedTeacherId] = useState<string | null>(
+  const [expandedPsychologistId, setExpandedPsychologistId] = useState<string | null>(
     null
   );
-  const [selectedTeacher, setSelectedTeacher] = useState<Teacher | null>(null);
+  const [selectedPsychologist, setSelectedPsychologist] = useState<Psychologist | null>(null);
   const dispatch = useDispatch<AppDispatch>();
   const favorites = useSelector(selectFavorites);
 
@@ -59,8 +60,8 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
     setIsOpen(prevState => !prevState);
   };
 
-  const handleBookTrialClick = (psychologist: Teacher) => {
-    setSelectedTeacher(psychologist);
+  const handleBookTrialClick = (psychologist: Psychologist) => {
+    setSelectedPsychologist(psychologist);
     toggleModal();
   };
 
@@ -69,16 +70,16 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
   };
 
   const handleReadMoreClick = (psychologistId: string) => {
-    setExpandedTeacherId(prevId => (prevId === psychologistId ? null : psychologistId));
+    setExpandedPsychologistId(prevId => (prevId === psychologistId ? null : psychologistId));
   };
 
   const getButtonText = (psychologistId: string) =>
-    expandedTeacherId === psychologistId ? 'Hide more' : 'Read More';
+    expandedPsychologistId === psychologistId ? 'Hide more' : 'Read More';
 
   const isFavorite =
     favorites &&
     favorites.some(
-      favorTeacher => favorTeacher && favorTeacher.id === psychologist.id
+      favorPsychologist => favorPsychologist && favorPsychologist.id === psychologist.id
     );
 
   const onSwitchFavorite = () => {
@@ -100,7 +101,7 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
   return (
     <>
       <ImgContainer>
-        <TeacherPhoto
+        <PsychologistPhoto
           src={psychologist.avatar_url}
           loading="lazy"
           alt="avatar"
@@ -155,7 +156,7 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
           </ItemInfo>
           <About>{psychologist.about} </About>
         </ListInfo>
-        {expandedTeacherId === psychologist.id && (
+        {expandedPsychologistId === psychologist.id && (
           <div>
             <ExpText>{psychologist.experience}</ExpText>
             <ReviewList>
@@ -202,15 +203,15 @@ export const Card: React.FC<{ psychologist: Teacher; authUser: any }> = ({
             <li></li>
           )}
         </LevelList>
-        {expandedTeacherId === psychologist.id && (
+        {expandedPsychologistId === psychologist.id && (
           <BookBtn type="button" onClick={() => handleBookTrialClick(psychologist)}>
             Make an appointment
           </BookBtn>
         )}
       </InfoContainer>
-      {isOpen && selectedTeacher && (
+      {isOpen && selectedPsychologist && (
         <Modal toggleModal={toggleModal}>
-          <BookTrialModal psychologist={selectedTeacher} close={close} />
+          <BookTrialModal psychologist={selectedPsychologist} close={close} />
         </Modal>
       )}
     </>

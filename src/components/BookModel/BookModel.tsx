@@ -5,15 +5,16 @@ import {
   BookTrialTitle,
   FormTitle,
   SomeText,
-  TeacherBlock,
-  TeacherName,
-  TeacherNameBlock,
+  PsychologistBlock,
+  PsychologistName,
+  PsychologistNameBlock,
+  TelTimeContainer,
 } from './BookModel.styled';
 
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import toast from 'react-hot-toast';
-import { TeacherPhoto } from '../Card/Card.styled';
+import { PsychologistPhoto } from '../Card/Card.styled';
 import {
   FormStyle,
   ErrMsg,
@@ -22,6 +23,8 @@ import {
 } from '../Modal/Modal.styled';
 
 import { BookTrialProps } from '../../redux/types';
+
+
 
 export const BookTrialModal: React.FC<BookTrialProps> = ({
   psychologist,
@@ -38,7 +41,7 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
     email: Yup.string().email('Invalid email').required('Required'),
     time: Yup.string().required(),
     phoneNuber: Yup.number().min(8, 'Too Short!').required('Required'),
-    comment: Yup.string().required(),
+    comment: Yup.string(),
   });
 
   const handleSubmit = () => {
@@ -54,36 +57,35 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
         short form below to book your personal appointment with a professional
         psychologist. We guarantee confidentiality and respect for your privacy.
       </BookTrialText>
-      <TeacherBlock>
-        <TeacherPhoto
+      <PsychologistBlock>
+        <PsychologistPhoto
           src={psychologist.avatar_url}
           loading="lazy"
           alt="avatar"
           width="44"
           height="44"
         />
-        <TeacherNameBlock>
+        <PsychologistNameBlock>
           <SomeText>Your psychologists</SomeText>
-          <TeacherName>
+          <PsychologistName>
             {psychologist.name} {psychologist.surname}
-          </TeacherName>
-        </TeacherNameBlock>
-      </TeacherBlock>
+          </PsychologistName>
+        </PsychologistNameBlock>
+      </PsychologistBlock>
       <FormTitle></FormTitle>
       <Formik
         initialValues={{
           fullname: '',
           email: '',
           phoneNuber: '',
-          time: "",
-          comment: "",
+          time: '00:00',
+          comment: '',
         }}
         onSubmit={handleSubmit}
         validationSchema={BookLessonSchema}
       >
         {({}) => (
           <FormStyle>
-           
             <FieldStyle
               name="fullname"
               placeholder={nameEntered ? '' : 'Full Name'}
@@ -97,13 +99,25 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({
               onFocus={() => setEmailEntered(true)}
             />
             <ErrMsg name="email" component="div" />
+            <TelTimeContainer>
+              <FieldStyle
+                type="tel"
+                name="phoneNuber"
+                placeholder={phoneEntered ? '' : 'Phone number'}
+                onFocus={() => setPhoneEntered(true)}
+              />
+              <ErrMsg name="phoneNuber" component="div" />
+              <FieldStyle name="time" type="time" />
+            </TelTimeContainer>
             <FieldStyle
-              type="tel"
-              name="phoneNuber"
-              placeholder={phoneEntered ? '' : 'Phone number'}
-              onFocus={() => setPhoneEntered(true)}
+              as="textarea"
+              id="comment"
+              type="textarea"
+              name="comment"
+              placeholder="Comment"
+              style={{ height: '116px' }}
             />
-            <ErrMsg name="phoneNuber" component="div" />
+            <ErrMsg name="comment" component="div" />
             <BtnSubmit type="submit">Send</BtnSubmit>
           </FormStyle>
         )}

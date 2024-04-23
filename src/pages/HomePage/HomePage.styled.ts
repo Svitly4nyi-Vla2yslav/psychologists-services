@@ -8,7 +8,7 @@ export const HomeContainer = styled.div`
   margin: 0 auto;
  
 
-//  @media screen and (min-width: 1440px) {
+//  
 //   width: 100%;
 // }
 `;
@@ -20,6 +20,10 @@ export const InfoContainer = styled.div`
   flex-wrap: wrap;
   gap: 126px;
   justify-content: center;
+  @media screen and (max-width: 867px) {
+    padding-bottom: 80px;
+
+  }
 `;
 
 // ----------------MAIN TEXT------------------
@@ -114,7 +118,8 @@ export const LinkStart = styled(Link)`
     font-size: 18px;
     padding: 16px 88px;
     width: 267px;
-    height: 60px;
+    height: auto;
+    text-align: center;
     margin-bottom: 0;
   }
 `;
@@ -133,24 +138,27 @@ export const ImageContainer = styled.div`
 `;
 
 export const ImgGirlSvg = styled.img`
-  left: 25%;
-  width: 250px;
+  // left: 25%;
+  // width: 250px;
 
-  @media screen and (min-width: 1140px) {
+  // @media screen and (min-width: 1140px) {
  
-    border-radius: 10px;
-    width: 464px;
-    height: 526px;
-  }
+  //   border-radius: 10px;
+  //   width: 464px;
+  //   height: 526px;
+  // }
+  width: 100%;
+  object-fit: contain;
 `;
 
 export const ImgHomePage = styled.img`
   position: absolute;
-  top: 337px;
-  left: -100px;
+  top: 71%;
+  left: -6%;
   z-index: 1;
   width: 311px;
 height: 118px;
+
   @media screen and (min-width: 1140px) {
     top: 337px;
     left: -100px;
@@ -163,6 +171,10 @@ position: absolute;
 top: 176px;
     left: -33px;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    display: none;
+    
+  }
 `;
 
 export const ContactIcon = styled.img`
@@ -171,6 +183,14 @@ top: -121px;
 left: 463px;
   z-index: 13;
   width: 48px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+    
+  }
+  @media screen and (max-width: 1140px) {
+  left: 950%;
+  }
 `;
 
 export const ArrowIcon = styled.img`

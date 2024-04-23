@@ -1,48 +1,49 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTeachers } from '../../redux/psychologists/operations';
+import { fetchPsychologists } from '../../redux/psychologists/operations';
 import {
   selectError,
   selectIsLoading,
-  selectTeachers,
+  selectPsychologists,
 } from '../../redux/selectors';
-import { LoadMoreBtn, TeachersContainer } from './Psychologists.styled';
+import { LoadMoreBtn, PsychologistsContainer } from './Psychologists.styled';
 import { fetchFavorites } from '../../redux/favorites/operations';
 import { CardList } from '../../components/CardList/CardList';
 import { MyLoader } from '../../components/Loader/Loader';
 import { AppDispatch } from '../../redux/store';
 
-interface TeachersProps{
+interface PsychologistsProps{
   authUser: any;
 }
 
-const Teacher: React.FC<TeachersProps> = ({ authUser}) => {
+const Psychologist: React.FC<PsychologistsProps> = ({ authUser}) => {
   const dispatch = useDispatch<AppDispatch>();
-  const psychologists = useSelector(selectTeachers);
+  const psychologists = useSelector(selectPsychologists);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-  const [visibleTeachers, setVisibleTeachers] = useState(3);
+  const [visiblePsychologists, setVisiblePsychologists] = useState(3);
 
-  const loadMoreTeachers = () => {
-    setVisibleTeachers((prevVisibleTeachers) => prevVisibleTeachers + 3);
+  const loadMorePsychologists = () => {
+    setVisiblePsychologists((prevVisiblePsychologists) => prevVisiblePsychologists + 3);
   };
 
   useEffect(() => {
-    dispatch(fetchTeachers());
+    dispatch(fetchPsychologists());
     if (authUser && authUser.uid) {
       dispatch(fetchFavorites(authUser.uid));
     }
   }, [dispatch, authUser]);
 
   return (
-    <TeachersContainer>
+    <PsychologistsContainer>
       {isLoading && !error && <MyLoader/>}
-      <CardList authUser={authUser} psychologists={psychologists.slice(0, visibleTeachers)} />
-      {psychologists.length > visibleTeachers && (
-        <LoadMoreBtn onClick={loadMoreTeachers}>Load More</LoadMoreBtn>
+      {/* <Filter/> */}
+      <CardList authUser={authUser} psychologists={psychologists.slice(0, visiblePsychologists)} />
+      {psychologists.length > visiblePsychologists && (
+        <LoadMoreBtn onClick={loadMorePsychologists}>Load More</LoadMoreBtn>
       )}
-    </TeachersContainer>
+    </PsychologistsContainer>
   );
 };
 
-export default Teacher;
+export default Psychologist;

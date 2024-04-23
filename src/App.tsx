@@ -6,7 +6,7 @@ import { auth } from './firebase';
 import { PrivateRoute } from './components/Navigation/PrivateRoute';
 
 const Home = lazy(() => import('./pages/HomePage/HomePage'));
-const Teachers = lazy(() => import('./pages/Psychologists/Psychologists'));
+const Psychologists = lazy(() => import('./pages/Psychologists/Psychologists'));
 const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 
 export const App: React.FC = () => {
@@ -29,7 +29,7 @@ export const App: React.FC = () => {
     <Routes>
       <Route path="/" element={<Layout authUser={authUser} />}>
         <Route index element={<Home />} />
-        <Route path="psychologists" element={<Teachers authUser={authUser} />} />
+        <Route path="psychologists" element={<Psychologists authUser={authUser} />} />
         <Route
           path="favorites"
           element={

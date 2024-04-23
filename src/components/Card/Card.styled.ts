@@ -29,7 +29,7 @@ export const ImgContainer = styled.div`
   }
 `;
 
-export const TeacherPhoto = styled.img`
+export const PsychologistPhoto = styled.img`
   border-radius: 20%;
 `;
 
@@ -196,6 +196,7 @@ export const ItemInfo = styled.li`
 padding: 8px 16px;
 background: #f3f3f3;
 // width: 100%;
+height: 100%;
 `;
 
 export const ItemText = styled.span`

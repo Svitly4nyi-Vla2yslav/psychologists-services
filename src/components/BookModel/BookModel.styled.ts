@@ -20,7 +20,7 @@ color: rgba(18, 20, 23, 0.8);
 margin-bottom: 20px;
 `;
 
-export const TeacherBlock = styled.div`
+export const PsychologistBlock = styled.div`
   display: flex;
   gap: 14px;
  align-items: center;
@@ -33,13 +33,13 @@ line-height: 1.33;
 color: #8a8a89;
 `;
 
-export const TeacherNameBlock = styled.div`
+export const PsychologistNameBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
 `;
 
-export const TeacherName = styled.p`
+export const PsychologistName = styled.p`
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -103,4 +103,9 @@ export const RadioBtnField = styled(Field)`
         border-color: ${({ theme }) => theme.primaryYellow};
     }
   }
+`;
+
+export const TelTimeContainer = styled.div`
+display: flex;
+  gap: 8px;
 `;
