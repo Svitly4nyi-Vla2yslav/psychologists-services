@@ -3201,8 +3201,8 @@ margin-bottom: 30px;
 @media screen and (min-width: 768px) {
   width: 81%;
   margin: 0 auto;
-  justify-content: space-between;;
-  gap: 0px;
+  // justify-content: space-between;
+  gap: 30px;
   margin-bottom: 0;
 }
 `;z.img`
@@ -3507,18 +3507,19 @@ color: red;
 margin-top: -10px;
 `,bR=z.button`
 margin-top: 22px;
-border-radius: 12px;
+border-radius: 30px;
 padding: 16px;
 width: 100%;
 height: 60px;
-background: ${({theme:e})=>e.primaryYellow};
+
 font-weight: 700;
 font-size: 18px;
 line-height: 1.56;
-color: ${({theme:e})=>e.primaryBlack};
-
+color: ${({theme:e})=>e.orange};
+background: ${({theme:e})=>e.primaryYellow};
 &:hover {
-  background: ${({theme:e})=>e.primaryLightYellow};
+  color: ${({theme:e})=>e.orange};
+    background: ${({theme:e})=>e.lightYellow};
 }
 
 @media screen and (min-width: 768px) {
@@ -3642,7 +3643,7 @@ attempted value: ${o}
   margin: 0 auto;
  
 
-//  @media screen and (min-width: 1440px) {
+//  
 //   width: 100%;
 // }
 `,qW=z.div`
@@ -3652,6 +3653,10 @@ attempted value: ${o}
   flex-wrap: wrap;
   gap: 126px;
   justify-content: center;
+  @media screen and (max-width: 867px) {
+    padding-bottom: 80px;
+
+  }
 `,YW=z.div`
   // border-radius: 30px;
   // background: #f8f8f8;
@@ -3736,7 +3741,8 @@ color: #191a15;
     font-size: 18px;
     padding: 16px 88px;
     width: 267px;
-    height: 60px;
+    height: auto;
+    text-align: center;
     margin-bottom: 0;
   }
 `,ZW=z.div`
@@ -3750,22 +3756,25 @@ color: #191a15;
     height: 530px;
   }
 `,eH=z.img`
-  left: 25%;
-  width: 250px;
+  // left: 25%;
+  // width: 250px;
 
-  @media screen and (min-width: 1140px) {
+  // @media screen and (min-width: 1140px) {
  
-    border-radius: 10px;
-    width: 464px;
-    height: 526px;
-  }
+  //   border-radius: 10px;
+  //   width: 464px;
+  //   height: 526px;
+  // }
+  width: 100%;
+  object-fit: contain;
 `,tH=z.img`
   position: absolute;
-  top: 337px;
-  left: -100px;
+  top: 71%;
+  left: -6%;
   z-index: 1;
   width: 311px;
 height: 118px;
+
   @media screen and (min-width: 1140px) {
     top: 337px;
     left: -100px;
@@ -3776,12 +3785,24 @@ position: absolute;
 top: 176px;
     left: -33px;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    display: none;
+    
+  }
 `,rH=z.img`
 position: absolute;
 top: -121px;
 left: 463px;
   z-index: 13;
   width: 48px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+    
+  }
+  @media screen and (max-width: 1140px) {
+  left: 950%;
+  }
 `;z.img`
 
 `;const iH=z.div`
@@ -3858,4 +3879,4 @@ background-image: url();
   white-space: pre-line;
 `;z.span`
   display: block;
-`;const $W=({authUser:e})=>{const[t,n]=w.useState(!1),[r,i]=w.useState(!1),[s,o]=w.useState(!1),a=()=>{n(d=>!d)};function l(){o(!1),i(!0),a()}function u(){i(!1),o(!0),a()}const c=()=>{n(!1)};return k.jsxs(y9,{children:[k.jsxs(v9,{children:[k.jsxs(_9,{children:[k.jsx("li",{children:k.jsx(vT,{to:"/"})}),k.jsx("li",{children:k.jsxs(w9,{to:"/",children:[k.jsx(DW,{children:"psychologists."}),"services"]})})]}),k.jsx(D7,{authUser:e,onClickLogin:l,onClickRegister:u})]}),k.jsx(E9,{}),k.jsx(w.Suspense,{children:k.jsx(vO,{})}),k.jsx(d5,{position:"top-right",reverseOrder:!1}),t&&k.jsxs(R7,{toggleModal:a,children:[r&&k.jsx(OW,{close:c}),s&&k.jsx(NW,{close:c,name:"",email:"",password:""})]})]})},LW=({children:e,authUser:t})=>t?e:k.jsx(yO,{to:"/"}),KE=w.lazy(()=>u_(()=>import("./HomePage-658c1017.js"),[])),MW=w.lazy(()=>u_(()=>import("./Psychologists-03405ab7.js"),["assets/Psychologists-03405ab7.js","assets/Loader-84cdda89.js"])),FW=w.lazy(()=>u_(()=>import("./FavoritesPage-01fd3df0.js"),["assets/FavoritesPage-01fd3df0.js","assets/Loader-84cdda89.js"])),jW=()=>{const[e,t]=w.useState(as.currentUser);return w.useEffect(()=>{const n=p3(as,r=>{t(r||null)});return()=>{n()}},[]),k.jsx(wO,{children:k.jsxs(Rs,{path:"/",element:k.jsx($W,{authUser:e}),children:[k.jsx(Rs,{index:!0,element:k.jsx(KE,{})}),k.jsx(Rs,{path:"psychologists",element:k.jsx(MW,{authUser:e})}),k.jsx(Rs,{path:"favorites",element:k.jsx(LW,{authUser:e,children:k.jsx(FW,{authUser:e})})}),k.jsx(Rs,{path:"*",element:k.jsx(KE,{})})]})})},UW={primaryBlack:"#121417",primaryGray:"#8A8A89",primaryYellow:"#f37113",primaryLightYellow:"#FFDC86",lightYellow:"#fc832c",green:"#9FBAAE",lightGreen:"#CBDED3",blue:"#9FB7CE",lightBlue:"#BFD6EA",pink:"#E0A39A",lightPink:"#F2C0BD",orange:"#FBDDC8",lightOrange:"rgba(252, 131, 44, 0.2)"};pp.createRoot(document.getElementById("root")).render(k.jsx(xO,{basename:"/",children:k.jsx(XN,{store:UP,children:k.jsxs(kN,{theme:UW,children:[k.jsx(jW,{}),k.jsx(bN,{})]})})}));export{bR as B,rH as C,$a as E,p7 as F,KW as H,qW as I,DW as L,R7 as M,nH as Q,Lt as R,YW as S,QW as T,ni as _,XW as a,JW as b,ZW as c,eH as d,tH as e,iH as f,HW as g,WW as h,sp as i,k as j,GW as k,A_ as l,oo as m,CW as n,xR as o,AR as p,Da as q,w as r,ip as s,Z1 as t,z as u,VW as v};
+`;const $W=({authUser:e})=>{const[t,n]=w.useState(!1),[r,i]=w.useState(!1),[s,o]=w.useState(!1),a=()=>{n(d=>!d)};function l(){o(!1),i(!0),a()}function u(){i(!1),o(!0),a()}const c=()=>{n(!1)};return k.jsxs(y9,{children:[k.jsxs(v9,{children:[k.jsxs(_9,{children:[k.jsx("li",{children:k.jsx(vT,{to:"/"})}),k.jsx("li",{children:k.jsxs(w9,{to:"/",children:[k.jsx(DW,{children:"psychologists."}),"services"]})})]}),k.jsx(D7,{authUser:e,onClickLogin:l,onClickRegister:u})]}),k.jsx(E9,{}),k.jsx(w.Suspense,{children:k.jsx(vO,{})}),k.jsx(d5,{position:"top-right",reverseOrder:!1}),t&&k.jsxs(R7,{toggleModal:a,children:[r&&k.jsx(OW,{close:c}),s&&k.jsx(NW,{close:c,name:"",email:"",password:""})]})]})},LW=({children:e,authUser:t})=>t?e:k.jsx(yO,{to:"/"}),KE=w.lazy(()=>u_(()=>import("./HomePage-a6cd2c42.js"),[])),MW=w.lazy(()=>u_(()=>import("./Psychologists-86976487.js"),["assets/Psychologists-86976487.js","assets/Loader-06a81ae0.js"])),FW=w.lazy(()=>u_(()=>import("./FavoritesPage-f3a512f9.js"),["assets/FavoritesPage-f3a512f9.js","assets/Loader-06a81ae0.js"])),jW=()=>{const[e,t]=w.useState(as.currentUser);return w.useEffect(()=>{const n=p3(as,r=>{t(r||null)});return()=>{n()}},[]),k.jsx(wO,{children:k.jsxs(Rs,{path:"/",element:k.jsx($W,{authUser:e}),children:[k.jsx(Rs,{index:!0,element:k.jsx(KE,{})}),k.jsx(Rs,{path:"psychologists",element:k.jsx(MW,{authUser:e})}),k.jsx(Rs,{path:"favorites",element:k.jsx(LW,{authUser:e,children:k.jsx(FW,{authUser:e})})}),k.jsx(Rs,{path:"*",element:k.jsx(KE,{})})]})})},UW={primaryBlack:"#121417",primaryGray:"#8A8A89",primaryYellow:"#f37113",primaryLightYellow:"#FFDC86",lightYellow:"#fc832c",green:"#9FBAAE",lightGreen:"#CBDED3",blue:"#9FB7CE",lightBlue:"#BFD6EA",pink:"#E0A39A",lightPink:"#F2C0BD",orange:"#FBDDC8",lightOrange:"rgba(252, 131, 44, 0.2)"};pp.createRoot(document.getElementById("root")).render(k.jsx(xO,{basename:"/",children:k.jsx(XN,{store:UP,children:k.jsxs(kN,{theme:UW,children:[k.jsx(jW,{}),k.jsx(bN,{})]})})}));export{bR as B,rH as C,$a as E,p7 as F,KW as H,qW as I,DW as L,R7 as M,nH as Q,Lt as R,YW as S,QW as T,ni as _,XW as a,JW as b,ZW as c,eH as d,tH as e,iH as f,HW as g,WW as h,sp as i,k as j,GW as k,A_ as l,oo as m,CW as n,xR as o,AR as p,Da as q,w as r,ip as s,Z1 as t,z as u,VW as v};
