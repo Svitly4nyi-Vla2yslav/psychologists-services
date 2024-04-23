@@ -5,7 +5,7 @@ export const PsychologistsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: #f8f8f878;
 `;
 
 export const LoadMoreBtn = styled.button`
