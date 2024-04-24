@@ -23,7 +23,7 @@ margin-bottom: 30px;
 @media screen and (min-width: 768px) {
   width: 81%;
   margin: 0 auto;
-  // justify-content: space-between;
+  justify-content: space-between;
   gap: 30px;
   margin-bottom: 0;
 }

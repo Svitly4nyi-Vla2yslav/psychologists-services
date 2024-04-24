@@ -128,12 +128,12 @@ export const LinkStart = styled(Link)`
 export const ImageContainer = styled.div`
   position: relative;
   border-radius: 30px;
-  max-width: 464px;
-  height: 526px;
+  // max-width: 464px;
+  // height: 526px;
 
   @media screen and (min-width: 1140px) {
-    width: 568px;
-    height: 530px;
+    // width: 568px;
+    // height: 530px;
   }
 `;
 

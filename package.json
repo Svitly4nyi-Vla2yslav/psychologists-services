@@ -1,6 +1,6 @@
 {
   "name": "psychologists-services",
-  "homepage": "https://github.com/Svitly4nyi-Vla2yslav/LearnLingo/",
+  "homepage": "https://psychologist-services.netlify.app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,6 +20,7 @@
     "@reduxjs/toolkit": "^2.2.2",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "antd": "^5.16.4",
+    "dotenv": "^16.4.5",
     "firebase": "^10.11.0",
     "formik": "^2.4.5",
     "modern-normalize": "^2.0.0",
