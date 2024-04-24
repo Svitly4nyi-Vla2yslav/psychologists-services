@@ -3202,7 +3202,7 @@ margin-bottom: 30px;
 @media screen and (min-width: 768px) {
   width: 81%;
   margin: 0 auto;
-  // justify-content: space-between;
+  justify-content: space-between;
   gap: 30px;
   margin-bottom: 0;
 }
@@ -3749,12 +3749,12 @@ color: #191a15;
 `,ZW=z.div`
   position: relative;
   border-radius: 30px;
-  max-width: 464px;
-  height: 526px;
+  // max-width: 464px;
+  // height: 526px;
 
   @media screen and (min-width: 1140px) {
-    width: 568px;
-    height: 530px;
+    // width: 568px;
+    // height: 530px;
   }
 `,eH=z.img`
   // left: 25%;
@@ -3880,4 +3880,4 @@ background-image: url();
   white-space: pre-line;
 `;z.span`
   display: block;
-`;const $W=({authUser:e})=>{const[t,n]=w.useState(!1),[r,i]=w.useState(!1),[s,o]=w.useState(!1),a=()=>{n(d=>!d)};function l(){o(!1),i(!0),a()}function u(){i(!1),o(!0),a()}const c=()=>{n(!1)};return k.jsxs(y9,{children:[k.jsxs(v9,{children:[k.jsxs(_9,{children:[k.jsx("li",{children:k.jsx(vT,{to:"/"})}),k.jsx("li",{children:k.jsxs(w9,{to:"/",children:[k.jsx(DW,{children:"psychologists."}),"services"]})})]}),k.jsx(D7,{authUser:e,onClickLogin:l,onClickRegister:u})]}),k.jsx(E9,{}),k.jsx(w.Suspense,{children:k.jsx(vO,{})}),k.jsx(d5,{position:"top-right",reverseOrder:!1}),t&&k.jsxs(R7,{toggleModal:a,children:[r&&k.jsx(OW,{close:c}),s&&k.jsx(NW,{close:c,name:"",email:"",password:""})]})]})},LW=({children:e,authUser:t})=>t?e:k.jsx(yO,{to:"/"}),KE=w.lazy(()=>u_(()=>import("./HomePage-7a3c14a4.js"),[])),MW=w.lazy(()=>u_(()=>import("./Psychologists-653069a5.js"),["assets/Psychologists-653069a5.js","assets/Loader-c0bff545.js"])),FW=w.lazy(()=>u_(()=>import("./FavoritesPage-2401bf50.js"),["assets/FavoritesPage-2401bf50.js","assets/Loader-c0bff545.js"])),jW=()=>{const[e,t]=w.useState(as.currentUser);return w.useEffect(()=>{const n=p3(as,r=>{t(r||null)});return()=>{n()}},[]),k.jsx(wO,{children:k.jsxs(Rs,{path:"/",element:k.jsx($W,{authUser:e}),children:[k.jsx(Rs,{index:!0,element:k.jsx(KE,{})}),k.jsx(Rs,{path:"psychologists",element:k.jsx(MW,{authUser:e})}),k.jsx(Rs,{path:"favorites",element:k.jsx(LW,{authUser:e,children:k.jsx(FW,{authUser:e})})}),k.jsx(Rs,{path:"*",element:k.jsx(KE,{})})]})})},UW={primaryBlack:"#121417",primaryGray:"#8A8A89",primaryYellow:"#f37113",primaryLightYellow:"#FFDC86",lightYellow:"#fc832c",green:"#9FBAAE",lightGreen:"#CBDED3",blue:"#9FB7CE",lightBlue:"#BFD6EA",pink:"#E0A39A",lightPink:"#F2C0BD",orange:"#FBDDC8",lightOrange:"rgba(252, 131, 44, 0.2)"};pp.createRoot(document.getElementById("root")).render(k.jsx(xO,{basename:"/",children:k.jsx(XN,{store:UP,children:k.jsxs(kN,{theme:UW,children:[k.jsx(jW,{}),k.jsx(bN,{})]})})}));export{bR as B,rH as C,$a as E,p7 as F,KW as H,qW as I,DW as L,R7 as M,nH as Q,Lt as R,YW as S,QW as T,ni as _,XW as a,JW as b,ZW as c,eH as d,tH as e,iH as f,HW as g,WW as h,sp as i,k as j,GW as k,A_ as l,oo as m,CW as n,xR as o,AR as p,Da as q,w as r,ip as s,Z1 as t,z as u,VW as v};
+`;const $W=({authUser:e})=>{const[t,n]=w.useState(!1),[r,i]=w.useState(!1),[s,o]=w.useState(!1),a=()=>{n(d=>!d)};function l(){o(!1),i(!0),a()}function u(){i(!1),o(!0),a()}const c=()=>{n(!1)};return k.jsxs(y9,{children:[k.jsxs(v9,{children:[k.jsxs(_9,{children:[k.jsx("li",{children:k.jsx(vT,{to:"/"})}),k.jsx("li",{children:k.jsxs(w9,{to:"/",children:[k.jsx(DW,{children:"psychologists."}),"services"]})})]}),k.jsx(D7,{authUser:e,onClickLogin:l,onClickRegister:u})]}),k.jsx(E9,{}),k.jsx(w.Suspense,{children:k.jsx(vO,{})}),k.jsx(d5,{position:"top-right",reverseOrder:!1}),t&&k.jsxs(R7,{toggleModal:a,children:[r&&k.jsx(OW,{close:c}),s&&k.jsx(NW,{close:c,name:"",email:"",password:""})]})]})},LW=({children:e,authUser:t})=>t?e:k.jsx(yO,{to:"/"}),KE=w.lazy(()=>u_(()=>import("./HomePage-e3634fa7.js"),[])),MW=w.lazy(()=>u_(()=>import("./Psychologists-2ffe1dd9.js"),["assets/Psychologists-2ffe1dd9.js","assets/Loader-6846361b.js"])),FW=w.lazy(()=>u_(()=>import("./FavoritesPage-a385aee2.js"),["assets/FavoritesPage-a385aee2.js","assets/Loader-6846361b.js"])),jW=()=>{const[e,t]=w.useState(as.currentUser);return w.useEffect(()=>{const n=p3(as,r=>{t(r||null)});return()=>{n()}},[]),k.jsx(wO,{children:k.jsxs(Rs,{path:"/",element:k.jsx($W,{authUser:e}),children:[k.jsx(Rs,{index:!0,element:k.jsx(KE,{})}),k.jsx(Rs,{path:"psychologists",element:k.jsx(MW,{authUser:e})}),k.jsx(Rs,{path:"favorites",element:k.jsx(LW,{authUser:e,children:k.jsx(FW,{authUser:e})})}),k.jsx(Rs,{path:"*",element:k.jsx(KE,{})})]})})},UW={primaryBlack:"#121417",primaryGray:"#8A8A89",primaryYellow:"#f37113",primaryLightYellow:"#FFDC86",lightYellow:"#fc832c",green:"#9FBAAE",lightGreen:"#CBDED3",blue:"#9FB7CE",lightBlue:"#BFD6EA",pink:"#E0A39A",lightPink:"#F2C0BD",orange:"#FBDDC8",lightOrange:"rgba(252, 131, 44, 0.2)"};pp.createRoot(document.getElementById("root")).render(k.jsx(xO,{basename:"/",children:k.jsx(XN,{store:UP,children:k.jsxs(kN,{theme:UW,children:[k.jsx(jW,{}),k.jsx(bN,{})]})})}));export{bR as B,rH as C,$a as E,p7 as F,KW as H,qW as I,DW as L,R7 as M,nH as Q,Lt as R,YW as S,QW as T,ni as _,XW as a,JW as b,ZW as c,eH as d,tH as e,iH as f,HW as g,WW as h,sp as i,k as j,GW as k,A_ as l,oo as m,CW as n,xR as o,AR as p,Da as q,w as r,ip as s,Z1 as t,z as u,VW as v};

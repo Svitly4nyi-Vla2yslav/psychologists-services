@@ -1,4 +1,4 @@
-import{u as i,R as h,F as D,r as m,l as q,m as b,n as W,j as t,o as H,p as A,q as u,E as j,B as K,_ as N,g as G,h as V,M as J,s as Q,t as X,v as C}from"./index-646c3408.js";const nt=e=>e.psychologists.items,rt=e=>e.psychologists.isLoading,at=e=>e.psychologists.error,Z=e=>e.favorites.items,ot=e=>e.favorites.isLoading,st=e=>e.favorites.error,U=i.ul`
+import{u as i,R as h,F as D,r as m,l as q,m as b,n as W,j as t,o as H,p as A,q as u,E as j,B as K,_ as N,g as G,h as V,M as J,s as Q,t as X,v as C}from"./index-5aa5194e.js";const nt=e=>e.psychologists.items,rt=e=>e.psychologists.isLoading,at=e=>e.psychologists.error,Z=e=>e.favorites.items,ot=e=>e.favorites.isLoading,st=e=>e.favorites.error,U=i.ul`
  display: flex;
  mask-type: 28px;
  flex-direction: column;
